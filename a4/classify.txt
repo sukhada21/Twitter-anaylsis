@@ -1,0 +1,2 @@
+Number of instances per class found for positive tweets:103
+Number of instances per class found for negative tweets::121

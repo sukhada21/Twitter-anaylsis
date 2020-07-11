@@ -1,0 +1,8 @@
+
+ Number of users Collected: 206
+ Number of messages Collected: 221
+ 
+  Number of communities discovered=16
+  Average number of user per community =1.875
+ Number of instances per class found for positive tweets:103
+ Number of instances per class found for negative tweets::121

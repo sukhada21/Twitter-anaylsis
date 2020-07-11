@@ -1,0 +1,3 @@
+
+ Number of communities discovered=16
+ Average number of user per community =1.875

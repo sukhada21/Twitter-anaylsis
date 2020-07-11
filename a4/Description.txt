@@ -1,0 +1,11 @@
+In the assignment 4 , we use Twitter API to collect information about "#captainMarvel" and do sentiment analysis on the same.
+
+There are four files:
+1) collect.py : Here we are collecting information about captain marvel from 3 different cities of the world from USA , UK and India , we are making them as csv files and will be using them to do sentiment analysis.
+We collected 221 tweets from 200 users on captain marvel movie, we further used this file to do anlysis of the positive and negative tweets.
+
+2)cluster.py divide the it into 15 communities and we have 47.93333333333333 no of user per cluster
+
+3) classify.py - we used LogisticRegression classifier and negative and positive files to do sentiment analysis on the topic , we found that overall the reaction for this movie was average with 103 positive tweets and 120 negative tweets , thus giving an neutral review to the movie.
+
+4)Summary.py is the final file giving information on the total output.

@@ -1,0 +1,44 @@
+Enter your responses inline below and push this file to your private GitHub
+repository.
+
+
+1. Assume I plan to use the friend_overlap function above to quantify the
+similarity of two users. E.g., because 238 is larger than 1, I conclude that
+Jill Stein and Gary Johnson are more similar than Hillary Clinton and Donald
+Trump.
+
+How is this approach misleading? How might you fix it?
+
+Ans: In friend overlap method we are calaculating the number of common friends these two candidate have, but we are not considering out of how many.Though the number of candidates between a two people is more ,this quantity need to be verified against the total.For eg Jill stein and Gary Johnson have common friends 238 , and their combined total number of friends is assunimg to be 10000 making 238 only 2.38%. Whereas for donaldtrump and hillary the number of common friend is 2 out and combined common friends can be assuming 10,making it 20%.
+So the similarity between the two people can not be determined by the common friends they share , but on percentage of common friend against the total number of combined friends.Thus this approch is misleading.Can be fixed by below formula:
+
+% of similarity = Common Friends/ Total number of Friends of both the participants.  
+
+2. Looking at the output of your followed_by_hillary_and_donald function, why
+do you think this user is followed by both Hilary Clinton and Donald Trump,
+who are rivals? Do some web searches to see if you can find out more
+information.
+
+Ans: Both Donald Trump and Hillary follows only two accounts ie. Vice President Mike Pence(VP) and Whitehouse(WhiteHouse).WhiteHouse being the official administrative page of the whitehouse , thus the updates regarding any rules and laws must on this page , thus both must be following it, as they both ran for presidential elections.As far as vice president Mike Pence goes ,he belongs to the same political party as donald Trump , thus Donald Trump seem to follow him. As on twitter once we follow a person we do keep getting their regular tweets, may be thats the reason for regular update on Republican party or on Vice President Mike Pence hillary must be following him.
+
+
+3. There is a big difference in how many accounts each candidate follows (Gary
+Johnson follows over 3K accounts, while Donald Trump follows less than
+50). Why do you think this is? How might that affect our analysis?
+
+Ans: Gary Johnson seems to be following a lot of institute , foundation pages and news channel pages , as he may have interest in their tweets and my also followed them for updates or used twitter for his elections campaign.
+On the other hand Donald Trump seems to be following only either his family members or his party associates, he might not have used twitter for social contacts or updates.People following other really depends on the person personal interest and also as how he is using the social platform, either to create an impact or just to communicate or for upadates. Thus a person followers tell us about persons personal interests and he social connectivity , things he might be liking and following in his daily life, his connections with other people etc.
+
+
+4. The follower graph we've collected is incomplete. To expand it, we would
+have to also collect the list of accounts followed by each of the
+friends. That is, for each user X that Donald Trump follows, we would have to
+also collect all the users that X follows. Assuming we again use the API call
+https://dev.twitter.com/rest/reference/get/friends/ids, how many requests will
+we have to make? Given how Twitter does rate limiting
+(https://dev.twitter.com/rest/public/rate-limiting), approximately how many
+minutes will it take to collect this data?
+
+Ans: The request window that we have is Requests/ 15 mins = 15 ie. with in 15mis we can only make 15 requests thus 1 request/min.
+Now from the graph that we plotted we have IDs for 269 nodes ie the number of friends follwed by more than one person.To do these calls the number of times we will have to make the request call is (rate-limit) = 269/15 = 17.9=18 times(approx).
+But if we have to consider all friends of the candidate we will be having approx 5700 nodes, going by the rate-limit it would take 380 calls(rate-limit) taking 380* 15 = 5700 mins(approx) for all friends of all users and for the current graph nodes = 18 * 15 =270 mins(approx).

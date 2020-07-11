@@ -1,0 +1,16 @@
+1. Looking at the top errors printed by get_top_misclassified, name two ways you would modify your classifier to improve accuracy (it could be features, tokenization, or something else.)
+
+Ans :The accurancy mostly depends on classifier we use or words and features we apply it on. Two ways we can modify your classifer to improve accuracy is by changing setting or modifications of the below things:
+
+1) We can possibly change or modify the tokenizer method , where we can filter out the data in preprocessing step. There are various ways of doing it like removing stop words , stemming-lemmatization , word segmentation , Normalization etc
+
+2) We can also modify the classifier we are using i.e LogisticRegression classifier, Currently we are using the default version of the classifier.
+
+
+
+
+2. Implement one of the above methods. How did it affect the results?
+Ans:
+We use the tokenization approrach , where we imporve the words used in our classifier by filtering it. The approcah we used here is by removing stop-words. A stop word is a commonly used word (such as “the”, “a”, “an”, “in”).
+By removing the stop-words we have improved the accuracy from 0.73 to 0.78.
+We have made changes in tokenize() method of a2-stopwords file. 
